@@ -6,9 +6,9 @@ import './App.css';
 class App extends Component {
   state = {name: "this.state.name",}
 
-eventHandler = (event) => {
+eventHandler = (varName) => {
   // console.log("changed")
-  this.setState({ name: "this.setState" });
+  this.setState({ name: varName  });
 }
 
   render() {
@@ -20,7 +20,7 @@ eventHandler = (event) => {
         <UserInput
           onChange = {this.eventHandler}
           click = {this.eventHandler}   />
-        <button onClick={this.eventHandler  }> NOPE </button>
+        <button onClick={this.eventHandler.bind(this, "this.eventHandler.bind(this, 2ndarg)") }> NOPE </button>
       </div>
     );
   }
