@@ -23,8 +23,7 @@ twowaybindHandler = (event) => {
         <UserOutput name = {this.state.name} />
         <UserOutput />
         <UserInput
-          // onChange = {this.eventHandler}
-          click = {this.eventHandler}
+          currentName = {this.state.name}
           changed={this.twowaybindHandler}/>
         <button onClick={this.eventHandler.bind(this, "this.eventHandler.bind(this, 2ndarg)") }> NOPE </button>
       </div>

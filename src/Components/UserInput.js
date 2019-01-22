@@ -6,7 +6,7 @@ function userinput(props){
   <input
     // onClick = {props.click}
     type="text"
-    value={props.name}
+    value={props.currentName}
     onChange={props.changed}/>
   </form>
 )
