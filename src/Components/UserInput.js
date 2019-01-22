@@ -4,9 +4,10 @@ function userinput(props){
   return(
   <form>
   <input
-    onClick = {props.click}
+    // onClick = {props.click}
     type="text"
-    value=""/>
+    value={props.name}
+    onChange={props.changed}/>
   </form>
 )
 }

@@ -11,6 +11,11 @@ eventHandler = (varName) => {
   this.setState({ name: varName  });
 }
 
+twowaybindHandler = (event) => {
+  this.setState({
+  name: event.target.value
+  })
+}
   render() {
     return (
       <div className="App">
@@ -18,8 +23,9 @@ eventHandler = (varName) => {
         <UserOutput name = {this.state.name} />
         <UserOutput />
         <UserInput
-          onChange = {this.eventHandler}
-          click = {this.eventHandler}   />
+          // onChange = {this.eventHandler}
+          click = {this.eventHandler}
+          changed={this.twowaybindHandler}/>
         <button onClick={this.eventHandler.bind(this, "this.eventHandler.bind(this, 2ndarg)") }> NOPE </button>
       </div>
     );
